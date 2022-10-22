@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vivado HLS Report for 'mask_track_switch_ap_fixed_ap_fixed_config5_s'
+================================================================
+* Date:           Sun Oct 16 21:48:21 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 1.464 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      345|      345| 1.725 us | 1.725 us |  345|  345|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- MaskLoop1_MaskLoop2  |      343|      343|         3|          1|          1|   342|    yes   |
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 5 3 
+3 --> 4 
+4 --> 2 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.65>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %res_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str76, i32 0, i32 0, [1 x i8]* @p_str77, [1 x i8]* @p_str77, [1 x i8]* @p_str77, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str77, [1 x i8]* @p_str77)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %data_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str76, i32 0, i32 0, [1 x i8]* @p_str77, [1 x i8]* @p_str77, [1 x i8]* @p_str77, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str77, [1 x i8]* @p_str77)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.65ns)   --->   "br label %1" [firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 8 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 1.46>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i9 [ 0, %0 ], [ %add_ln236, %ifFalse ]" [firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 9 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%k_0_i = phi i3 [ 0, %0 ], [ %k, %ifFalse ]"   --->   Operation 10 'phi' 'k_0_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.88ns)   --->   "%icmp_ln236 = icmp eq i9 %indvar_flatten, -170" [firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 11 'icmp' 'icmp_ln236' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.77ns)   --->   "%add_ln236 = add i9 %indvar_flatten, 1" [firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 12 'add' 'add_ln236' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %icmp_ln236, label %"mask_track_single<ap_fixed<32, 16, 5, 3, 0>, ap_fixed<32, 16, 5, 3, 0>, config5>.exit", label %MaskLoop2" [firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_V = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %data_V_V)" [firmware/nnet_utils/nnet_deepcalo_stream.h:240->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 14 'read' 'tmp_V' <Predicate = (!icmp_ln236)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 15 [1/1] (0.99ns)   --->   "%icmp_ln1498 = icmp eq i32 %tmp_V, 0" [firmware/nnet_utils/nnet_deepcalo_stream.h:241->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 15 'icmp' 'icmp_ln1498' <Predicate = (!icmp_ln236)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.67ns)   --->   "%add_ln238 = add i3 %k_0_i, 1" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 16 'add' 'add_ln238' <Predicate = (!icmp_ln236)> <Delay = 0.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.58ns)   --->   "%icmp_ln238 = icmp eq i3 %k_0_i, -2" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 17 'icmp' 'icmp_ln238' <Predicate = (!icmp_ln236)> <Delay = 0.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.20ns)   --->   "%k = select i1 %icmp_ln238, i3 1, i3 %add_ln238" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 18 'select' 'k' <Predicate = (!icmp_ln236)> <Delay = 0.20> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.58ns)   --->   "%icmp_ln238_1 = icmp eq i3 %k, -2" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 19 'icmp' 'icmp_ln238_1' <Predicate = (!icmp_ln236)> <Delay = 0.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %icmp_ln238_1, label %ifTrue, label %ifFalse" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 20 'br' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.36>
+ST_3 : Operation 21 [1/1] (0.36ns)   --->   "%select_ln241 = select i1 %icmp_ln1498, i32 0, i32 65536" [firmware/nnet_utils/nnet_deepcalo_stream.h:241->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 21 'select' 'select_ln241' <Predicate = (!icmp_ln236)> <Delay = 0.36> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 22 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %res_V_V, i32 %select_ln241)" [firmware/nnet_utils/nnet_deepcalo_stream.h:247->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 22 'write' <Predicate = (icmp_ln238_1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @MaskLoop1_MaskLoop2_str)"   --->   Operation 23 'specloopname' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 342, i64 342, i64 342)"   --->   Operation 24 'speclooptripcount' 'empty' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str79) nounwind" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 25 'specloopname' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str79)" [firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 26 'specregionbegin' 'tmp_1' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str77) nounwind" [firmware/nnet_utils/nnet_deepcalo_stream.h:239->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 27 'specpipeline' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str79, i32 %tmp_1)" [firmware/nnet_utils/nnet_deepcalo_stream.h:246->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 28 'specregionend' 'empty_2' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+ST_4 : Operation 29 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P(i32* %res_V_V, i32 %select_ln241)" [firmware/nnet_utils/nnet_deepcalo_stream.h:247->firmware/nnet_utils/nnet_deepcalo_stream.h:287]   --->   Operation 29 'write' <Predicate = (icmp_ln238_1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "br label %ifFalse"   --->   Operation 30 'br' <Predicate = (icmp_ln238_1)> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 31 'br' <Predicate = (!icmp_ln236)> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "ret void" [firmware/nnet_utils/nnet_deepcalo_stream.h:291]   --->   Operation 32 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten', firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287) with incoming values : ('add_ln236', firmware/nnet_utils/nnet_deepcalo_stream.h:236->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [7]  (0.656 ns)
+
+ <State 2>: 1.46ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [8]  (0 ns)
+	'add' operation ('add_ln238', firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [22]  (0.673 ns)
+	'select' operation ('k', firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [24]  (0.208 ns)
+	'icmp' operation ('icmp_ln238_1', firmware/nnet_utils/nnet_deepcalo_stream.h:238->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [25]  (0.584 ns)
+
+ <State 3>: 0.36ns
+The critical path consists of the following:
+	'select' operation ('select_ln241', firmware/nnet_utils/nnet_deepcalo_stream.h:241->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [20]  (0.36 ns)
+	axis write on port 'res_V_V' (firmware/nnet_utils/nnet_deepcalo_stream.h:247->firmware/nnet_utils/nnet_deepcalo_stream.h:287) [28]  (0 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

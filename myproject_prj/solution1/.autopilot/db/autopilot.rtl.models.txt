@@ -1,0 +1,4 @@
+regslice_core
+regslice_core
+mask_track_switch_ap_fixed_ap_fixed_config5_s
+myproject

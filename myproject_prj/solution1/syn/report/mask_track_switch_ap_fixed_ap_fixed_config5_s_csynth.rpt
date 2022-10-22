@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vivado HLS Report for 'mask_track_switch_ap_fixed_ap_fixed_config5_s'
+================================================================
+* Date:           Sun Oct 16 21:48:21 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 1.464 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      345|      345| 1.725 us | 1.725 us |  345|  345|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- MaskLoop1_MaskLoop2  |      343|      343|         3|          1|          1|   342|    yes   |
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|     116|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      93|    -|
+|Register         |        -|      -|      26|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      26|     209|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln236_fu_91_p2                |     +    |      0|  0|  16|           9|           1|
+    |add_ln238_fu_103_p2               |     +    |      0|  0|  11|           3|           1|
+    |ap_block_pp0_stage0_01001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_io                |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln1498_fu_97_p2              |   icmp   |      0|  0|  20|          32|           1|
+    |icmp_ln236_fu_85_p2               |   icmp   |      0|  0|  13|           9|           9|
+    |icmp_ln238_1_fu_123_p2            |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln238_fu_109_p2              |   icmp   |      0|  0|   9|           3|           3|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                   |    or    |      0|  0|   2|           1|           1|
+    |k_fu_115_p3                       |  select  |      0|  0|   3|           1|           1|
+    |res_V_V_TDATA_int                 |  select  |      0|  0|  19|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 116|          70|          29|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  21|          4|    1|          4|
+    |ap_done                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2        |   9|          2|    1|          2|
+    |ap_phi_mux_k_0_i_phi_fu_78_p4  |   9|          2|    3|          6|
+    |data_V_V_TDATA_blk_n           |   9|          2|    1|          2|
+    |indvar_flatten_reg_63          |   9|          2|    9|         18|
+    |k_0_i_reg_74                   |   9|          2|    3|          6|
+    |res_V_V_TDATA_blk_n            |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  93|         20|   21|         44|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+---+----+-----+-----------+
+    |                Name                | FF| LUT| Bits| Const Bits|
+    +------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                           |  3|   0|    3|          0|
+    |ap_done_reg                         |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0             |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2             |  1|   0|    1|          0|
+    |icmp_ln1498_reg_146                 |  1|   0|    1|          0|
+    |icmp_ln236_reg_137                  |  1|   0|    1|          0|
+    |icmp_ln238_1_reg_156                |  1|   0|    1|          0|
+    |icmp_ln238_1_reg_156_pp0_iter1_reg  |  1|   0|    1|          0|
+    |indvar_flatten_reg_63               |  9|   0|    9|          0|
+    |k_0_i_reg_74                        |  3|   0|    3|          0|
+    |k_reg_151                           |  3|   0|    3|          0|
+    +------------------------------------+---+----+-----+-----------+
+    |Total                               | 26|   0|   26|          0|
+    +------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+----------------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |                 Source Object                |    C Type    |
++-----------------+-----+-----+------------+----------------------------------------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|ap_done          | out |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|ap_continue      |  in |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | mask_track_switch<ap_fixed,ap_fixed,config5> | return value |
+|data_V_V_TDATA   |  in |   32|    axis    |                   data_V_V                   |    pointer   |
+|data_V_V_TVALID  |  in |    1|    axis    |                   data_V_V                   |    pointer   |
+|data_V_V_TREADY  | out |    1|    axis    |                   data_V_V                   |    pointer   |
+|res_V_V_TDATA    | out |   32|    axis    |                    res_V_V                   |    pointer   |
+|res_V_V_TVALID   | out |    1|    axis    |                    res_V_V                   |    pointer   |
+|res_V_V_TREADY   |  in |    1|    axis    |                    res_V_V                   |    pointer   |
++-----------------+-----+-----+------------+----------------------------------------------+--------------+
+
