@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/YL_HUANG/10_21/full_model_layer/slice_tensor1d/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

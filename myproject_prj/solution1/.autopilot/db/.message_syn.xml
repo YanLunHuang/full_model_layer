@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;firmware/myproject.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from firmware/myproject.cpp:1:
+In file included from firmware/myproject.cpp:22:
+In file included from firmware/parameters.h:17:
+firmware/nnet_utils/nnet_deepcalo_stream.h:544:16: warning: comparison of unsigned expression &gt;= 0 is always true [-Wtautological-compare]
+        if ( i &gt;= CONFIG_T::start &amp;&amp; i &lt; CONFIG_T::end ){
+             ~ ^  ~~~~~~~~~~~~~~~
+firmware/nnet_utils/nnet_deepcalo_stream.h:590:9: note: in instantiation of function template specialization &apos;nnet::slice_tensor1d_s2s&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config41&gt;&apos; requested here
+        slice_tensor1d_s2s&lt;data_T, res_T, CONFIG_T&gt;(data, res);
+        ^
+firmware/myproject.cpp:118:2: note: in instantiation of function template specialization &apos;nnet::slice_tensor1d_switch&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config41&gt;&apos; requested here
+ nnet::slice_tensor1d_switch&lt;input_t, layer41_t, config41&gt;(tracks, layer102_out);
+ ^
+In file included from firmware/myproject.cpp:1:
+In file included from firmware/myproject.cpp:22:
+In file included from firmware/parameters.h:17:
+firmware/nnet_utils/nnet_deepcalo_stream.h:560:16: warning: comparison of unsigned expression &gt;= 0 is always true [-Wtautological-compare]
+        if ( i &gt;= CONFIG_T::start &amp;&amp; i &lt; CONFIG_T::end ){
+             ~ ^  ~~~~~~~~~~~~~~~
+firmware/nnet_utils/nnet_deepcalo_stream.h:592:9: note: in instantiation of function template specialization &apos;nnet::slice_tensor1d_s2a&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config41&gt;&apos; requested here
+        slice_tensor1d_s2a&lt;data_T, res_T, CONFIG_T&gt;(data, res);
+        ^
+firmware/myproject.cpp:118:2: note: in instantiation of function template specialization &apos;nnet::slice_tensor1d_switch&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config41&gt;&apos; requested here
+ nnet::slice_tensor1d_switch&lt;input_t, layer41_t, config41&gt;(tracks, layer102_out);
+ ^
+In file included from firmware/myproject.cpp:1:
+In file included from firmware/myproject.cpp:22:
+In file included from firmware/parameters.h:17:
+firmware/nnet_utils/nnet_deepcalo_stream.h:576:16: warning: comparison of unsigned expression &gt;= 0 is always true [-Wtautological-compare]
+        if ( i &gt;= CONFIG_T::start &amp;&amp; i &lt; CONFIG_T::end ){
+             ~ ^  ~~~~~~~~~~~~~~~
+firmware/nnet_utils/nnet_deepcalo_stream.h:594:9: note: in instantiation of function template specialization &apos;nnet::slice_tensor1d_a2a&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config41&gt;&apos; requested here
+        slice_tensor1d_a2a&lt;data_T, res_T, CONFIG_T&gt;(data, res);
+        ^
+firmware/myproject.cpp:118:2: note: in instantiation of function template specialization &apos;nnet::slice_tensor1d_switch&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config41&gt;&apos; requested here
+ nnet::slice_tensor1d_switch&lt;input_t, layer41_t, config41&gt;(tracks, layer102_out);
+ ^
+3 warnings generated."/>
+	<Message severity="WARNING" prefix="[HLS 214-114]" key="HLS 214-114" tag="DATAFLOW,SDX_KERNEL" content="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_sepconv1d_stream.h:258:2"/>
+	<Message severity="WARNING" prefix="[HLS 200-471]" key="HLS 200-471" tag="DATAFLOW,SDX_KERNEL" content="Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54723 ; free virtual = 122541"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54723 ; free virtual = 122541"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;nnet::slice_tensor1d_s2s&lt;ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, config41&gt;&apos; into &apos;nnet::slice_tensor1d_switch&lt;ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, config41&gt;&apos; (firmware/nnet_utils/nnet_deepcalo_stream.h:590)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:01:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54704 ; free virtual = 122525"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:01:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54688 ; free virtual = 122510"/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;tracks.V.V&apos; (firmware/myproject.cpp:25) ."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;layer102_out.V.V&apos; (firmware/myproject.cpp:26) ."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;tracks.V.V&apos; (firmware/myproject.cpp:25) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;layer102_out.V.V&apos; (firmware/myproject.cpp:26) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-712]" key="XFORM_DATAFLOW_TRANSFORM_230" tag="DATAFLOW" content="Applying dataflow to function &apos;myproject&apos;, detected/extracted 1 process function(s): 
+	 &apos;nnet::slice_tensor1d_switch&lt;ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, config41&gt;&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54654 ; free virtual = 122479"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;nnet::slice_tensor1d_switch&lt;ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;32, 16, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, config41&gt;&apos; to &apos;slice_tensor1d_switch&lt;ap_fixed,ap_fixed,config41&gt;&apos; (firmware/nnet_utils/nnet_deepcalo_stream.h:541:45)"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54646 ; free virtual = 122471"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;myproject&apos; ..."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;slice_tensor1d_switch&lt;ap_fixed,ap_fixed,config41&gt;&apos; to &apos;slice_tensor1d_switch_ap_fixed_ap_fixed_config41_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;slice_tensor1d_switch_ap_fixed_ap_fixed_config41_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 99.73 seconds; current allocated memory: 177.785 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.06 seconds; current allocated memory: 177.906 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;myproject&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.04 seconds; current allocated memory: 177.931 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.06 seconds; current allocated memory: 177.993 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;slice_tensor1d_switch_ap_fixed_ap_fixed_config41_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;slice_tensor1d_switch_ap_fixed_ap_fixed_config41_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.03 seconds; current allocated memory: 178.307 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;myproject&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;myproject/tracks_0_V_V&apos; to &apos;axis&apos; (register, both mode)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;myproject/layer102_out_0_V_V&apos; to &apos;axis&apos; (register, both mode)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;myproject&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;myproject&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.1 seconds; current allocated memory: 178.741 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,SDX_LOOP" content="**** Loop Constraint Status: All loop constraints were satisfied."/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,SDX_KERNEL" content="**** Estimated Fmax: 833.85 MHz"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54638 ; free virtual = 122465"/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for myproject."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for myproject."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding test bench file &apos;myproject_test.cpp&apos; to the project"/>
+</Messages>

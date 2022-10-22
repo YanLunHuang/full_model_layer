@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'slice_tensor1d_switch_ap_fixed_ap_fixed_config41_s'
+================================================================
+* Date:           Tue Oct 18 18:32:16 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 1.199 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      995|      995| 4.975 us | 4.975 us |  995|  995|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      993|      993|         3|          1|          1|   992|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      57|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      75|    -|
+|Register         |        -|      -|      51|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      51|     132|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |i_fu_76_p2                        |     +    |      0|  0|  17|          10|           1|
+    |ap_block_pp0_stage0_01001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_io                |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln541_fu_70_p2               |   icmp   |      0|  0|  13|          10|           7|
+    |icmp_ln544_fu_92_p2               |   icmp   |      0|  0|  11|           5|           1|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                   |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  57|          34|          18|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |data_V_V_TDATA_blk_n     |   9|          2|    1|          2|
+    |i_0_i_reg_59             |   9|          2|   10|         20|
+    |res_V_V_TDATA_blk_n      |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  75|         16|   16|         34|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   3|   0|    3|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |i_0_i_reg_59                      |  10|   0|   10|          0|
+    |icmp_ln544_reg_112                |   1|   0|    1|          0|
+    |icmp_ln544_reg_112_pp0_iter1_reg  |   1|   0|    1|          0|
+    |tmp_V_reg_107                     |  32|   0|   32|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             |  51|   0|   51|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+---------------------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |                   Source Object                   |    C Type    |
++-----------------+-----+-----+------------+---------------------------------------------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|ap_done          | out |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|ap_continue      |  in |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | slice_tensor1d_switch<ap_fixed,ap_fixed,config41> | return value |
+|data_V_V_TDATA   |  in |   32|    axis    |                      data_V_V                     |    pointer   |
+|data_V_V_TVALID  |  in |    1|    axis    |                      data_V_V                     |    pointer   |
+|data_V_V_TREADY  | out |    1|    axis    |                      data_V_V                     |    pointer   |
+|res_V_V_TDATA    | out |   32|    axis    |                      res_V_V                      |    pointer   |
+|res_V_V_TVALID   | out |    1|    axis    |                      res_V_V                      |    pointer   |
+|res_V_V_TREADY   |  in |    1|    axis    |                      res_V_V                      |    pointer   |
++-----------------+-----+-----+------------+---------------------------------------------------+--------------+
+
