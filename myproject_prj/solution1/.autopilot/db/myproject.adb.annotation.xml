@@ -1,0 +1,5 @@
+<annotationInfo>
+<item  id="40" filename="firmware/nnet_utils/nnet_stream.h" linenumber="107" name="icmp_ln107" contextFuncName="clone_stream_array&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config103&gt;" moduleName="clone_stream_switch&lt;ap_fixed,ap_fixed,config103&gt;" rtlName="icmp_ln107_fu_203_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/home/YL_HUANG/10_21/clone_stream"&gt;&lt;\/item&gt;
+<item  id="42" filename="firmware/nnet_utils/nnet_stream.h" linenumber="107" name="i" contextFuncName="clone_stream_array&lt;ap_fixed&lt;32, 16, 5, 3, 0&gt;, ap_fixed&lt;32, 16, 5, 3, 0&gt;, config103&gt;" moduleName="clone_stream_switch&lt;ap_fixed,ap_fixed,config103&gt;" rtlName="i_fu_209_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="/home/YL_HUANG/10_21/clone_stream"&gt;&lt;\/item&gt;
+<item  id="57" filename="firmware/myproject.cpp" linenumber="41" name="_ln41" contextFuncName="myproject" moduleName="myproject" rtlName="clone_stream_switch_ap_fixed_ap_fixed_config103_U0" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/YL_HUANG/10_21/clone_stream"><\/item>
+</annotationInfo>

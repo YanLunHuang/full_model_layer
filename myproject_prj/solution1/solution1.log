@@ -1,0 +1,254 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_sepconv1d_stream.h:254:2
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8605 ; free virtual = 100895
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8605 ; free virtual = 100895
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::clone_stream_array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' into 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' (firmware/nnet_utils/nnet_stream.h:139).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8595 ; free virtual = 100888
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8580 ; free virtual = 100874
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'CloneLoop' (firmware/nnet_utils/nnet_stream.h:107) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Input' (firmware/nnet_utils/nnet_stream.h:113) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Output' (firmware/nnet_utils/nnet_stream.h:118) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' completely with a factor of 6.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'tracks.V.V' (firmware/myproject.cpp:25) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer103_cpy1.V.V' (firmware/myproject.cpp:26) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer103_cpy2.V.V' (firmware/myproject.cpp:27) .
+INFO: [XFORM 203-101] Partitioning array 'in_data.V' (firmware/nnet_utils/nnet_stream.h:110) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tracks.V.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer103_cpy1.V.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer103_cpy2.V.V' (firmware/myproject.cpp:27) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 1 process function(s): 
+	 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8581 ; free virtual = 100878
+WARNING: [XFORM 203-631] Renaming function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' to 'clone_stream_switch<ap_fixed,ap_fixed,config103>' (firmware/nnet_utils/nnet_stream.h:107:72)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8566 ; free virtual = 100864
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'clone_stream_switch<ap_fixed,ap_fixed,config103>' to 'clone_stream_switch_ap_fixed_ap_fixed_config103_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clone_stream_switch_ap_fixed_ap_fixed_config103_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CloneLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 99.9 seconds; current allocated memory: 178.900 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 179.220 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 179.292 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 179.507 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clone_stream_switch_ap_fixed_ap_fixed_config103_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clone_stream_switch_ap_fixed_ap_fixed_config103_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 180.317 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_0_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_1_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_2_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_3_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_4_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_5_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_sepconv1d_stream.h:254:2
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 9452 ; free virtual = 101880
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 9452 ; free virtual = 101880
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::clone_stream_array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' into 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' (firmware/nnet_utils/nnet_stream.h:138).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 9436 ; free virtual = 101865
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 1043.910 ; gain = 523.871 ; free physical = 9422 ; free virtual = 101850
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'CloneLoop' (firmware/nnet_utils/nnet_stream.h:107) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Input' (firmware/nnet_utils/nnet_stream.h:113) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Output' (firmware/nnet_utils/nnet_stream.h:118) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' completely with a factor of 6.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'tracks.V.V' (firmware/myproject.cpp:25) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer103_cpy1.V.V' (firmware/myproject.cpp:26) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer103_cpy2.V.V' (firmware/myproject.cpp:27) .
+INFO: [XFORM 203-101] Partitioning array 'in_data.V' (firmware/nnet_utils/nnet_stream.h:110) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tracks.V.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer103_cpy1.V.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer103_cpy2.V.V' (firmware/myproject.cpp:27) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 1 process function(s): 
+	 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:33 ; elapsed = 00:01:37 . Memory (MB): peak = 1043.910 ; gain = 523.871 ; free physical = 9388 ; free virtual = 101816
+WARNING: [XFORM 203-631] Renaming function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' to 'clone_stream_switch<ap_fixed,ap_fixed,config103>' (firmware/nnet_utils/nnet_stream.h:107:72)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 1043.910 ; gain = 523.871 ; free physical = 9372 ; free virtual = 101801
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'clone_stream_switch<ap_fixed,ap_fixed,config103>' to 'clone_stream_switch_ap_fixed_ap_fixed_config103_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clone_stream_switch_ap_fixed_ap_fixed_config103_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CloneLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 97.31 seconds; current allocated memory: 179.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 179.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 179.552 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 179.768 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clone_stream_switch_ap_fixed_ap_fixed_config103_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clone_stream_switch_ap_fixed_ap_fixed_config103_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 180.580 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_0_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_1_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_2_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_3_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_4_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_5_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_sepconv1d_stream.h:254:2
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8878 ; free virtual = 101302
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 8878 ; free virtual = 101302
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::clone_stream_array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' into 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' (firmware/nnet_utils/nnet_stream.h:139).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 9376 ; free virtual = 101800
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 1043.910 ; gain = 523.871 ; free physical = 9337 ; free virtual = 101761
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'CloneLoop' (firmware/nnet_utils/nnet_stream.h:107) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Input' (firmware/nnet_utils/nnet_stream.h:113) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Output' (firmware/nnet_utils/nnet_stream.h:118) in function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' completely with a factor of 6.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'tracks.V.V' (firmware/myproject.cpp:25) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer103_cpy1.V.V' (firmware/myproject.cpp:26) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer103_cpy2.V.V' (firmware/myproject.cpp:27) .
+INFO: [XFORM 203-101] Partitioning array 'in_data.V' (firmware/nnet_utils/nnet_stream.h:110) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tracks.V.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer103_cpy1.V.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer103_cpy2.V.V' (firmware/myproject.cpp:27) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 1 process function(s): 
+	 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 1043.910 ; gain = 523.871 ; free physical = 9285 ; free virtual = 101709
+WARNING: [XFORM 203-631] Renaming function 'nnet::clone_stream_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config103>' to 'clone_stream_switch<ap_fixed,ap_fixed,config103>' (firmware/nnet_utils/nnet_stream.h:107:72)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 1043.910 ; gain = 523.871 ; free physical = 9081 ; free virtual = 101506
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'clone_stream_switch<ap_fixed,ap_fixed,config103>' to 'clone_stream_switch_ap_fixed_ap_fixed_config103_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clone_stream_switch_ap_fixed_ap_fixed_config103_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CloneLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 97.44 seconds; current allocated memory: 179.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 179.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 179.573 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 179.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clone_stream_switch_ap_fixed_ap_fixed_config103_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clone_stream_switch_ap_fixed_ap_fixed_config103_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 180.601 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_0_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_1_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_2_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_3_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_4_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/tracks_5_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500]

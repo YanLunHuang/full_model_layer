@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="myproject" xd:componentRef="myproject" xd:initiationInterval="61" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="tracks[0]" xd:originalName="tracks0" xd:direction="in" xd:interfaceRef="tracks_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="tracks[1]" xd:originalName="tracks1" xd:direction="in" xd:interfaceRef="tracks_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="tracks[2]" xd:originalName="tracks2" xd:direction="in" xd:interfaceRef="tracks_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="tracks[3]" xd:originalName="tracks3" xd:direction="in" xd:interfaceRef="tracks_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="tracks[4]" xd:originalName="tracks4" xd:direction="in" xd:interfaceRef="tracks_4_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="tracks[5]" xd:originalName="tracks5" xd:direction="in" xd:interfaceRef="tracks_5_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy1[0]" xd:originalName="layer103_cpy10" xd:direction="out" xd:interfaceRef="layer103_cpy1_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy1[1]" xd:originalName="layer103_cpy11" xd:direction="out" xd:interfaceRef="layer103_cpy1_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy1[2]" xd:originalName="layer103_cpy12" xd:direction="out" xd:interfaceRef="layer103_cpy1_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy1[3]" xd:originalName="layer103_cpy13" xd:direction="out" xd:interfaceRef="layer103_cpy1_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy1[4]" xd:originalName="layer103_cpy14" xd:direction="out" xd:interfaceRef="layer103_cpy1_4_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy1[5]" xd:originalName="layer103_cpy15" xd:direction="out" xd:interfaceRef="layer103_cpy1_5_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy2[0]" xd:originalName="layer103_cpy20" xd:direction="out" xd:interfaceRef="layer103_cpy2_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy2[1]" xd:originalName="layer103_cpy21" xd:direction="out" xd:interfaceRef="layer103_cpy2_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy2[2]" xd:originalName="layer103_cpy22" xd:direction="out" xd:interfaceRef="layer103_cpy2_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy2[3]" xd:originalName="layer103_cpy23" xd:direction="out" xd:interfaceRef="layer103_cpy2_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy2[4]" xd:originalName="layer103_cpy24" xd:direction="out" xd:interfaceRef="layer103_cpy2_4_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer103_cpy2[5]" xd:originalName="layer103_cpy25" xd:direction="out" xd:interfaceRef="layer103_cpy2_5_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="60" xd:worst-case="60" xd:average-case="60"/>
+  <xd:resourceEstimates xd:LUT="263" xd:FF="207" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>
