@@ -1,0 +1,10 @@
+sv work "glbl.v"
+sv xil_defaultlib "myproject.autotb.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "AESL_axi_s_tracks_0_V_V.v"
+sv xil_defaultlib "AESL_axi_s_layer12_out_0_V_V.v"
+sv xil_defaultlib "sum1d_switch_ap_fixed_ap_fixed_32_16_5_3_0_config12_s.v"
+sv xil_defaultlib "myproject.v"
+sv xil_defaultlib "regslice_core.v"
+sv xil_defaultlib "sum1d_switch_ap_fixed_ap_fixed_32_16_5_3_0_config12_s_acc_V.v"
+
