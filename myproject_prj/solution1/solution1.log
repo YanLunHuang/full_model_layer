@@ -1,0 +1,91 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcu50-fsvh2104-2L-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_sepconv1d_stream.h:258:2
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 28076 ; free virtual = 112197
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 28076 ; free virtual = 112197
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::film_array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config42>' into 'nnet::film_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config42>' (firmware/nnet_utils/nnet_deepcalo_stream.h:169).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 28057 ; free virtual = 112181
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1044.027 ; gain = 523.988 ; free physical = 28038 ; free virtual = 112164
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'OutLoop' (firmware/nnet_utils/nnet_deepcalo_stream.h:147) in function 'nnet::film_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config42>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_deepcalo_stream.h:149) in function 'nnet::film_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config42>' completely with a factor of 16.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'em_barrel.V.V' (firmware/myproject.cpp:25) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'scalars.V.V' (firmware/myproject.cpp:25) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer102_out.V.V' (firmware/myproject.cpp:26) .
+INFO: [XFORM 203-101] Partitioning array 'scalar.V' (firmware/nnet_utils/nnet_deepcalo_stream.h:138) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'em_barrel.V.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scalars.V.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer102_out.V.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 1 process function(s): 
+	 'nnet::film_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config42>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:37 ; elapsed = 00:01:41 . Memory (MB): peak = 1044.027 ; gain = 523.988 ; free physical = 27999 ; free virtual = 112128
+WARNING: [XFORM 203-631] Renaming function 'nnet::film_switch<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config42>' to 'film_switch<ap_fixed,ap_fixed,ap_fixed,config42>' (firmware/nnet_utils/nnet_deepcalo_stream.h:142:75)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:38 ; elapsed = 00:01:42 . Memory (MB): peak = 1044.027 ; gain = 523.988 ; free physical = 27986 ; free virtual = 112115
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'film_switch<ap_fixed,ap_fixed,ap_fixed,config42>' to 'film_switch_ap_fixed_ap_fixed_ap_fixed_config42_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'film_switch_ap_fixed_ap_fixed_ap_fixed_config42_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ScalarLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'OutLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 102.21 seconds; current allocated memory: 189.269 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 190.787 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 190.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 191.280 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'film_switch_ap_fixed_ap_fixed_ap_fixed_config42_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'film_switch_ap_fixed_ap_fixed_ap_fixed_config42_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 193.862 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/em_barrel_0_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/em_barrel_1_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/em_barrel_2_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/em_barrel_3_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/em_barrel_4_V_V' to 'axis' (register, both mode).

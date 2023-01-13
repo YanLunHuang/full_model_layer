@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="myproject" xd:componentRef="myproject" xd:initiationInterval="3118" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="em_barrel[0]" xd:originalName="em_barrel0" xd:direction="in" xd:interfaceRef="em_barrel_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[1]" xd:originalName="em_barrel1" xd:direction="in" xd:interfaceRef="em_barrel_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[2]" xd:originalName="em_barrel2" xd:direction="in" xd:interfaceRef="em_barrel_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[3]" xd:originalName="em_barrel3" xd:direction="in" xd:interfaceRef="em_barrel_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[4]" xd:originalName="em_barrel4" xd:direction="in" xd:interfaceRef="em_barrel_4_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[5]" xd:originalName="em_barrel5" xd:direction="in" xd:interfaceRef="em_barrel_5_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[6]" xd:originalName="em_barrel6" xd:direction="in" xd:interfaceRef="em_barrel_6_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[7]" xd:originalName="em_barrel7" xd:direction="in" xd:interfaceRef="em_barrel_7_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[8]" xd:originalName="em_barrel8" xd:direction="in" xd:interfaceRef="em_barrel_8_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[9]" xd:originalName="em_barrel9" xd:direction="in" xd:interfaceRef="em_barrel_9_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[10]" xd:originalName="em_barrel10" xd:direction="in" xd:interfaceRef="em_barrel_10_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[11]" xd:originalName="em_barrel11" xd:direction="in" xd:interfaceRef="em_barrel_11_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[12]" xd:originalName="em_barrel12" xd:direction="in" xd:interfaceRef="em_barrel_12_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[13]" xd:originalName="em_barrel13" xd:direction="in" xd:interfaceRef="em_barrel_13_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[14]" xd:originalName="em_barrel14" xd:direction="in" xd:interfaceRef="em_barrel_14_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="em_barrel[15]" xd:originalName="em_barrel15" xd:direction="in" xd:interfaceRef="em_barrel_15_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="scalars[0]" xd:originalName="scalars0" xd:direction="in" xd:interfaceRef="scalars_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[0]" xd:originalName="layer102_out0" xd:direction="out" xd:interfaceRef="layer102_out_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[1]" xd:originalName="layer102_out1" xd:direction="out" xd:interfaceRef="layer102_out_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[2]" xd:originalName="layer102_out2" xd:direction="out" xd:interfaceRef="layer102_out_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[3]" xd:originalName="layer102_out3" xd:direction="out" xd:interfaceRef="layer102_out_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[4]" xd:originalName="layer102_out4" xd:direction="out" xd:interfaceRef="layer102_out_4_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[5]" xd:originalName="layer102_out5" xd:direction="out" xd:interfaceRef="layer102_out_5_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[6]" xd:originalName="layer102_out6" xd:direction="out" xd:interfaceRef="layer102_out_6_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[7]" xd:originalName="layer102_out7" xd:direction="out" xd:interfaceRef="layer102_out_7_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[8]" xd:originalName="layer102_out8" xd:direction="out" xd:interfaceRef="layer102_out_8_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[9]" xd:originalName="layer102_out9" xd:direction="out" xd:interfaceRef="layer102_out_9_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[10]" xd:originalName="layer102_out10" xd:direction="out" xd:interfaceRef="layer102_out_10_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[11]" xd:originalName="layer102_out11" xd:direction="out" xd:interfaceRef="layer102_out_11_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[12]" xd:originalName="layer102_out12" xd:direction="out" xd:interfaceRef="layer102_out_12_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[13]" xd:originalName="layer102_out13" xd:direction="out" xd:interfaceRef="layer102_out_13_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[14]" xd:originalName="layer102_out14" xd:direction="out" xd:interfaceRef="layer102_out_14_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="layer102_out[15]" xd:originalName="layer102_out15" xd:direction="out" xd:interfaceRef="layer102_out_15_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="3117" xd:worst-case="3117" xd:average-case="3117"/>
+  <xd:resourceEstimates xd:LUT="2069" xd:FF="2845" xd:BRAM="0" xd:DSP="64"/>
+</xd:acceleratorMap>

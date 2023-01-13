@@ -1,0 +1,218 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject'
+================================================================
+* Date:           Sat Dec 24 02:50:26 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 3.865 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     3117|     3117| 15.585 us | 15.585 us |  3118|  3118| dataflow |
+    +---------+---------+-----------+-----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                    |                                                   |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                      Instance                      |                       Module                      |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |film_switch_ap_fixed_ap_fixed_ap_fixed_config42_U0  |film_switch_ap_fixed_ap_fixed_ap_fixed_config42_s  |     3117|     3117| 15.585 us | 15.585 us |  3117|  3117|   none  |
+        +----------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        -|       -|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|     64|     2845|    2069|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|       -|    -|
+|Register             |        -|      -|        -|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|     64|     2845|    2069|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      2|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      1|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+---------------------------------------------------+---------+-------+------+------+-----+
+    |                      Instance                      |                       Module                      | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +----------------------------------------------------+---------------------------------------------------+---------+-------+------+------+-----+
+    |film_switch_ap_fixed_ap_fixed_ap_fixed_config42_U0  |film_switch_ap_fixed_ap_fixed_ap_fixed_config42_s  |        0|     64|  2845|  2069|    0|
+    +----------------------------------------------------+---------------------------------------------------+---------+-------+------+------+-----+
+    |Total                                               |                                                   |        0|     64|  2845|  2069|    0|
+    +----------------------------------------------------+---------------------------------------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+---------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++----------------------------+-----+-----+------------+---------------------+--------------+
+|em_barrel_0_V_V_TDATA       |  in |   32|    axis    |   em_barrel_0_V_V   |    pointer   |
+|em_barrel_0_V_V_TVALID      |  in |    1|    axis    |   em_barrel_0_V_V   |    pointer   |
+|em_barrel_0_V_V_TREADY      | out |    1|    axis    |   em_barrel_0_V_V   |    pointer   |
+|em_barrel_1_V_V_TDATA       |  in |   32|    axis    |   em_barrel_1_V_V   |    pointer   |
+|em_barrel_1_V_V_TVALID      |  in |    1|    axis    |   em_barrel_1_V_V   |    pointer   |
+|em_barrel_1_V_V_TREADY      | out |    1|    axis    |   em_barrel_1_V_V   |    pointer   |
+|em_barrel_2_V_V_TDATA       |  in |   32|    axis    |   em_barrel_2_V_V   |    pointer   |
+|em_barrel_2_V_V_TVALID      |  in |    1|    axis    |   em_barrel_2_V_V   |    pointer   |
+|em_barrel_2_V_V_TREADY      | out |    1|    axis    |   em_barrel_2_V_V   |    pointer   |
+|em_barrel_3_V_V_TDATA       |  in |   32|    axis    |   em_barrel_3_V_V   |    pointer   |
+|em_barrel_3_V_V_TVALID      |  in |    1|    axis    |   em_barrel_3_V_V   |    pointer   |
+|em_barrel_3_V_V_TREADY      | out |    1|    axis    |   em_barrel_3_V_V   |    pointer   |
+|em_barrel_4_V_V_TDATA       |  in |   32|    axis    |   em_barrel_4_V_V   |    pointer   |
+|em_barrel_4_V_V_TVALID      |  in |    1|    axis    |   em_barrel_4_V_V   |    pointer   |
+|em_barrel_4_V_V_TREADY      | out |    1|    axis    |   em_barrel_4_V_V   |    pointer   |
+|em_barrel_5_V_V_TDATA       |  in |   32|    axis    |   em_barrel_5_V_V   |    pointer   |
+|em_barrel_5_V_V_TVALID      |  in |    1|    axis    |   em_barrel_5_V_V   |    pointer   |
+|em_barrel_5_V_V_TREADY      | out |    1|    axis    |   em_barrel_5_V_V   |    pointer   |
+|em_barrel_6_V_V_TDATA       |  in |   32|    axis    |   em_barrel_6_V_V   |    pointer   |
+|em_barrel_6_V_V_TVALID      |  in |    1|    axis    |   em_barrel_6_V_V   |    pointer   |
+|em_barrel_6_V_V_TREADY      | out |    1|    axis    |   em_barrel_6_V_V   |    pointer   |
+|em_barrel_7_V_V_TDATA       |  in |   32|    axis    |   em_barrel_7_V_V   |    pointer   |
+|em_barrel_7_V_V_TVALID      |  in |    1|    axis    |   em_barrel_7_V_V   |    pointer   |
+|em_barrel_7_V_V_TREADY      | out |    1|    axis    |   em_barrel_7_V_V   |    pointer   |
+|em_barrel_8_V_V_TDATA       |  in |   32|    axis    |   em_barrel_8_V_V   |    pointer   |
+|em_barrel_8_V_V_TVALID      |  in |    1|    axis    |   em_barrel_8_V_V   |    pointer   |
+|em_barrel_8_V_V_TREADY      | out |    1|    axis    |   em_barrel_8_V_V   |    pointer   |
+|em_barrel_9_V_V_TDATA       |  in |   32|    axis    |   em_barrel_9_V_V   |    pointer   |
+|em_barrel_9_V_V_TVALID      |  in |    1|    axis    |   em_barrel_9_V_V   |    pointer   |
+|em_barrel_9_V_V_TREADY      | out |    1|    axis    |   em_barrel_9_V_V   |    pointer   |
+|em_barrel_10_V_V_TDATA      |  in |   32|    axis    |   em_barrel_10_V_V  |    pointer   |
+|em_barrel_10_V_V_TVALID     |  in |    1|    axis    |   em_barrel_10_V_V  |    pointer   |
+|em_barrel_10_V_V_TREADY     | out |    1|    axis    |   em_barrel_10_V_V  |    pointer   |
+|em_barrel_11_V_V_TDATA      |  in |   32|    axis    |   em_barrel_11_V_V  |    pointer   |
+|em_barrel_11_V_V_TVALID     |  in |    1|    axis    |   em_barrel_11_V_V  |    pointer   |
+|em_barrel_11_V_V_TREADY     | out |    1|    axis    |   em_barrel_11_V_V  |    pointer   |
+|em_barrel_12_V_V_TDATA      |  in |   32|    axis    |   em_barrel_12_V_V  |    pointer   |
+|em_barrel_12_V_V_TVALID     |  in |    1|    axis    |   em_barrel_12_V_V  |    pointer   |
+|em_barrel_12_V_V_TREADY     | out |    1|    axis    |   em_barrel_12_V_V  |    pointer   |
+|em_barrel_13_V_V_TDATA      |  in |   32|    axis    |   em_barrel_13_V_V  |    pointer   |
+|em_barrel_13_V_V_TVALID     |  in |    1|    axis    |   em_barrel_13_V_V  |    pointer   |
+|em_barrel_13_V_V_TREADY     | out |    1|    axis    |   em_barrel_13_V_V  |    pointer   |
+|em_barrel_14_V_V_TDATA      |  in |   32|    axis    |   em_barrel_14_V_V  |    pointer   |
+|em_barrel_14_V_V_TVALID     |  in |    1|    axis    |   em_barrel_14_V_V  |    pointer   |
+|em_barrel_14_V_V_TREADY     | out |    1|    axis    |   em_barrel_14_V_V  |    pointer   |
+|em_barrel_15_V_V_TDATA      |  in |   32|    axis    |   em_barrel_15_V_V  |    pointer   |
+|em_barrel_15_V_V_TVALID     |  in |    1|    axis    |   em_barrel_15_V_V  |    pointer   |
+|em_barrel_15_V_V_TREADY     | out |    1|    axis    |   em_barrel_15_V_V  |    pointer   |
+|scalars_0_V_V_TDATA         |  in |   32|    axis    |    scalars_0_V_V    |    pointer   |
+|scalars_0_V_V_TVALID        |  in |    1|    axis    |    scalars_0_V_V    |    pointer   |
+|scalars_0_V_V_TREADY        | out |    1|    axis    |    scalars_0_V_V    |    pointer   |
+|layer102_out_0_V_V_TDATA    | out |   32|    axis    |  layer102_out_0_V_V |    pointer   |
+|layer102_out_0_V_V_TVALID   | out |    1|    axis    |  layer102_out_0_V_V |    pointer   |
+|layer102_out_0_V_V_TREADY   |  in |    1|    axis    |  layer102_out_0_V_V |    pointer   |
+|layer102_out_1_V_V_TDATA    | out |   32|    axis    |  layer102_out_1_V_V |    pointer   |
+|layer102_out_1_V_V_TVALID   | out |    1|    axis    |  layer102_out_1_V_V |    pointer   |
+|layer102_out_1_V_V_TREADY   |  in |    1|    axis    |  layer102_out_1_V_V |    pointer   |
+|layer102_out_2_V_V_TDATA    | out |   32|    axis    |  layer102_out_2_V_V |    pointer   |
+|layer102_out_2_V_V_TVALID   | out |    1|    axis    |  layer102_out_2_V_V |    pointer   |
+|layer102_out_2_V_V_TREADY   |  in |    1|    axis    |  layer102_out_2_V_V |    pointer   |
+|layer102_out_3_V_V_TDATA    | out |   32|    axis    |  layer102_out_3_V_V |    pointer   |
+|layer102_out_3_V_V_TVALID   | out |    1|    axis    |  layer102_out_3_V_V |    pointer   |
+|layer102_out_3_V_V_TREADY   |  in |    1|    axis    |  layer102_out_3_V_V |    pointer   |
+|layer102_out_4_V_V_TDATA    | out |   32|    axis    |  layer102_out_4_V_V |    pointer   |
+|layer102_out_4_V_V_TVALID   | out |    1|    axis    |  layer102_out_4_V_V |    pointer   |
+|layer102_out_4_V_V_TREADY   |  in |    1|    axis    |  layer102_out_4_V_V |    pointer   |
+|layer102_out_5_V_V_TDATA    | out |   32|    axis    |  layer102_out_5_V_V |    pointer   |
+|layer102_out_5_V_V_TVALID   | out |    1|    axis    |  layer102_out_5_V_V |    pointer   |
+|layer102_out_5_V_V_TREADY   |  in |    1|    axis    |  layer102_out_5_V_V |    pointer   |
+|layer102_out_6_V_V_TDATA    | out |   32|    axis    |  layer102_out_6_V_V |    pointer   |
+|layer102_out_6_V_V_TVALID   | out |    1|    axis    |  layer102_out_6_V_V |    pointer   |
+|layer102_out_6_V_V_TREADY   |  in |    1|    axis    |  layer102_out_6_V_V |    pointer   |
+|layer102_out_7_V_V_TDATA    | out |   32|    axis    |  layer102_out_7_V_V |    pointer   |
+|layer102_out_7_V_V_TVALID   | out |    1|    axis    |  layer102_out_7_V_V |    pointer   |
+|layer102_out_7_V_V_TREADY   |  in |    1|    axis    |  layer102_out_7_V_V |    pointer   |
+|layer102_out_8_V_V_TDATA    | out |   32|    axis    |  layer102_out_8_V_V |    pointer   |
+|layer102_out_8_V_V_TVALID   | out |    1|    axis    |  layer102_out_8_V_V |    pointer   |
+|layer102_out_8_V_V_TREADY   |  in |    1|    axis    |  layer102_out_8_V_V |    pointer   |
+|layer102_out_9_V_V_TDATA    | out |   32|    axis    |  layer102_out_9_V_V |    pointer   |
+|layer102_out_9_V_V_TVALID   | out |    1|    axis    |  layer102_out_9_V_V |    pointer   |
+|layer102_out_9_V_V_TREADY   |  in |    1|    axis    |  layer102_out_9_V_V |    pointer   |
+|layer102_out_10_V_V_TDATA   | out |   32|    axis    | layer102_out_10_V_V |    pointer   |
+|layer102_out_10_V_V_TVALID  | out |    1|    axis    | layer102_out_10_V_V |    pointer   |
+|layer102_out_10_V_V_TREADY  |  in |    1|    axis    | layer102_out_10_V_V |    pointer   |
+|layer102_out_11_V_V_TDATA   | out |   32|    axis    | layer102_out_11_V_V |    pointer   |
+|layer102_out_11_V_V_TVALID  | out |    1|    axis    | layer102_out_11_V_V |    pointer   |
+|layer102_out_11_V_V_TREADY  |  in |    1|    axis    | layer102_out_11_V_V |    pointer   |
+|layer102_out_12_V_V_TDATA   | out |   32|    axis    | layer102_out_12_V_V |    pointer   |
+|layer102_out_12_V_V_TVALID  | out |    1|    axis    | layer102_out_12_V_V |    pointer   |
+|layer102_out_12_V_V_TREADY  |  in |    1|    axis    | layer102_out_12_V_V |    pointer   |
+|layer102_out_13_V_V_TDATA   | out |   32|    axis    | layer102_out_13_V_V |    pointer   |
+|layer102_out_13_V_V_TVALID  | out |    1|    axis    | layer102_out_13_V_V |    pointer   |
+|layer102_out_13_V_V_TREADY  |  in |    1|    axis    | layer102_out_13_V_V |    pointer   |
+|layer102_out_14_V_V_TDATA   | out |   32|    axis    | layer102_out_14_V_V |    pointer   |
+|layer102_out_14_V_V_TVALID  | out |    1|    axis    | layer102_out_14_V_V |    pointer   |
+|layer102_out_14_V_V_TREADY  |  in |    1|    axis    | layer102_out_14_V_V |    pointer   |
+|layer102_out_15_V_V_TDATA   | out |   32|    axis    | layer102_out_15_V_V |    pointer   |
+|layer102_out_15_V_V_TVALID  | out |    1|    axis    | layer102_out_15_V_V |    pointer   |
+|layer102_out_15_V_V_TREADY  |  in |    1|    axis    | layer102_out_15_V_V |    pointer   |
+|ap_clk                      |  in |    1| ap_ctrl_hs |      myproject      | return value |
+|ap_rst_n                    |  in |    1| ap_ctrl_hs |      myproject      | return value |
+|ap_start                    |  in |    1| ap_ctrl_hs |      myproject      | return value |
+|ap_done                     | out |    1| ap_ctrl_hs |      myproject      | return value |
+|ap_ready                    | out |    1| ap_ctrl_hs |      myproject      | return value |
+|ap_idle                     | out |    1| ap_ctrl_hs |      myproject      | return value |
++----------------------------+-----+-----+------------+---------------------+--------------+
+
